@@ -6,21 +6,20 @@ log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - xiaohe
   type: vless
-  server: 162.159.153.4
-  port: 443
-  uuid: f2a73750-3087-48ff-a763-1348c15dce68
+  server: uae.unixzone.us
+  port: 22573
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: rayan-007.maxima.dpdns.org
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: rayan-007.maxima.dpdns.org
+      Host: uae.unixzone.us
 - name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   type: vless
-  server: uae.unixzone.us
+  server: 84.235.244.108
   port: 22573
   uuid: 39947382-3212-41c9-bc3a-589574ac8b23
   udp: true
@@ -33,31 +32,46 @@ proxies:
       Host: uae.unixzone.us
 - name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
   type: vless
-  server: uae.unixzone.us
-  port: 22573
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  server: 57.129.130.10
+  port: 52014
+  uuid: bca740c6-6704-48ba-99da-7d7a31768d73
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+- name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
+  type: vless
+  server: 54.178.110.17
+  port: 4443
+  uuid: d5fbd83b-7346-4ad9-94c0-76293724824d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+  network: ws
+  ws-opts:
+    path: /@Marisa_kristi
+    headers:
+      Host: sxyyvihkektlx4rjxsdj.pkc73phpweu4rbxbatm444.workers.dev
+- name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
+  type: vless
+  server: 104.24.219.225
+  port: 443
+  uuid: c2c3de71-5ec5-430c-b096-81969b16ff8d
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: cdnfree.abdollahvand2.ir
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: uae.unixzone.us
-- name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  type: vless
-  server: 92.113.124.204
-  port: 18443
-  uuid: 86fbc352-47fd-4217-a014-98ed8b43693a
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
-  network: ws
-  ws-opts:
-    path: /@Marisa_kristifp=chrome
-    headers:
-      Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev
+      Host: cdnfree.abdollahvand2.ir
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,6 +81,7 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 03 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 04 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -76,5 +91,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 03 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 04 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
 rules:
 - MATCH,PROXIES
