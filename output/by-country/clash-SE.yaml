@@ -4,30 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇮🇷 IR 01 - xiaohe
+- name: 🇸🇪 SE 01 - xiaohe
   type: vless
-  server: mail.loyalsmile.net
-  port: 2052
-  uuid: ff766b85-d50f-47b7-9b63-6ca4ea128f3f
+  server: 94.143.231.146
+  port: 443
+  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
   udp: true
-  tls: false
+  tls: true
   skip-cert-verify: true
+  servername: sub.merky.top
   network: ws
   ws-opts:
-    path: /wp-content4
+    path: /merky-connect/de6/
     headers:
-      Host: mail.loyalsmile.net
+      Host: sub.merky.top
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇮🇷 IR 01 - xiaohe
+  - 🇸🇪 SE 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇮🇷 IR 01 - xiaohe
+  - 🇸🇪 SE 01 - xiaohe
 rules:
 - MATCH,PROXIES
