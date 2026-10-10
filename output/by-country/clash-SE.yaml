@@ -20,18 +20,18 @@ proxies:
       Host: sub.merky.top
 - name: 🇸🇪 SE 02 - xiaohe
   type: vless
-  server: 89.22.224.146
-  port: 43788
-  uuid: 6fbd9bd1-ccd4-4e2f-a918-a0f871965763
+  server: 216.24.57.73
+  port: 2087
+  uuid: b5ba2130-42d2-433f-953e-fca1c60cbc28
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+  servername: azsobhekhran.ticklitickli.ir
   network: ws
   ws-opts:
-    path: /@Marisa_kristi
+    path: /
     headers:
-      Host: ke859ch2gse1iery3hiz.e3q4a5mjld11kpj0zj8dq.workers.dev
+      Host: azsobhekhran.ticklitickli.ir
 proxy-groups:
 - name: PROXIES
   type: select
