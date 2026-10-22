@@ -18,6 +18,19 @@ proxies:
   client-fingerprint: chrome
 - name: 🇫🇮 FI 02 - xiaohe
   type: vless
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 45.144.234.157
+- name: 🇫🇮 FI 03 - xiaohe
+  type: vless
   server: 188.114.98.0
   port: 443
   uuid: 5504eaa8-1395-402f-8e0e-75ecd762e627
@@ -37,6 +50,7 @@ proxy-groups:
   - AUTO
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
+  - 🇫🇮 FI 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -44,5 +58,6 @@ proxy-groups:
   proxies:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
+  - 🇫🇮 FI 03 - xiaohe
 rules:
 - MATCH,PROXIES
