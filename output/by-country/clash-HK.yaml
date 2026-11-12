@@ -4,28 +4,32 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇧🇷 BR 01 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
   type: vmess
-  server: 103.88.232.55
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  server: 47.244.120.197
+  port: 36703
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
   alterId: 0
   cipher: auto
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: None
+  network: ws
+  ws-opts:
+    path: /arki
+    headers:
+      Host: 47.244.120.197
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇧🇷 BR 01 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇧🇷 BR 01 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 01 - xiaohe
 rules:
 - MATCH,PROXIES
